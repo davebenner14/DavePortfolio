@@ -9,11 +9,11 @@ html {
 }
 
 body {
-  --navy: rgb(25, 30, 55);
-  --teal: rgb(40, 50, 85);
-  --lightteal: rgb(70, 85, 130);
-  --darkteal: rgb(110, 130, 180);
-  --darkerteal: rgb(155, 175, 225);
+  --navy: rgb(15, 15, 15);
+  --teal: rgb(30, 30, 30);
+  --lightteal: rgb(45, 45, 45);
+  --darkteal: rgb(60, 60, 60);
+  --darkerteal: rgb(75, 75, 75);
   background-color: var(--teal);
   color: rgb(255, 255, 255);
   font-family: "Roboto", sans-serif;
