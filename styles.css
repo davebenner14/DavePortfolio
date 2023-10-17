@@ -9,11 +9,12 @@ html {
 }
 
 body {
-  --darkgrey: rgb(40, 40, 40);
-  --midgrey: rgb(60, 60, 60);
-  --lightgrey: rgb(80, 80, 80);
-  --darkergray: rgb(20, 20, 20);
-  background-color: var(--midgrey);
+  --navy: rgb(25, 30, 55);
+  --teal: rgb(40, 50, 85);
+  --lightteal: rgb(70, 85, 130);
+  --darkteal: rgb(110, 130, 180);
+  --darkerteal: rgb(155, 175, 225);
+  background-color: var(--teal);
   color: rgb(255, 255, 255);
   font-family: "Roboto", sans-serif;
   display: flex;
@@ -24,8 +25,13 @@ body {
   font-family: Barlow, sans-serif;
 }
 
+.project-new-icon {
+  width: 20.25;
+  height: 18.5;
+}
+
 #nav-computer {
-  background-color: var(--midgrey);
+  background-color: var(--teal);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -39,12 +45,22 @@ body {
   margin-left: 10%;
 }
 
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
 input#input-box {
   width: 150px;
   height: 20px;
   z-index: 1;
   border-radius: 8px 0 0 8px;
-  background-color: var(--darkgrey);
+  background-color: var(--darkteal);
   color: white;
   padding-left: 10px;
   padding-right: 20px;
@@ -52,10 +68,19 @@ input#input-box {
   outline: none;
 }
 
+input#input-box::after {
+  content: "|";
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  animation: blink 1s infinite;
+}
+
 input#input-box:focus,
 input#input-box:active,
 input#input-box:focus-within {
-  background-color: var(--lightgrey);
+  background-color: var(--lightteal);
 }
 
 ::placeholder {
@@ -64,49 +89,4 @@ input#input-box:focus-within {
 
 input#input-box:focus::placeholder {
   color: transparent;
-}
-
-.clear-button,
-.search-button,
-#microphone-button {
-  color: white;
-  background-color: var(--darkgrey);
-  border: none;
-  outline: none;
-  cursor: pointer;
-  width: 30px;
-  height: 20px;
-  border: 0px;
-  padding: 0px;
-  right: 15px;
-  z-index: 2;
-}
-
-.search-button {
-  border-radius: 0 8px 8px 0;
-  width: 20px;
-}
-
-#microphone-button {
-  border-radius: 8px;
-  margin-left: 5px;
-}
-
-.clear-button:hover,
-.search-button:hover,
-#microphone-button:hover {
-  background-color: var(--lightgrey);
-}
-
-.nav-link {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  padding: 8px 15px;
-  border-radius: 20px;
-  transition: ease 0.5s;
-}
-
-nav > div {
-  padding: 15px 10px;
-  font-size: large;
 }

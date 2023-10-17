@@ -5,19 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>David Benner</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="navbar.css" />
+
+    <script
+      src="https://kit.fontawesome.com/0eb0729b63.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="navbarSearch.js"></script>
   </head>
   <body>
-    <div id="nav-computer">
-      <div><a href="#" class="nav-link">Home</a></div>
-      <div><a href="#" class="nav-link">Projects</a></div>
-      <div><a href="#" class="nav-link">About</a></div>
-      <div><a href="#" class="nav-link">Contact</a></div>
-      <div class="input-wrapper">
-        <input type="text" id="input-box" placeholder="Search..." />
-        <button class="search-button"></button>
-        <button class="clear-button"></button>
-        <button id="microphone-button"></button>
+    <nav id="nav-computer">
+      <div>
+        <a class="nav-link scroll" href="#home"
+          ><i class="fa-solid fa-house"></i> Home</a
+        >
       </div>
+      <div class="projects-dropdown">
+        <a class="nav-link dropdown-link">
+          <i class="fa-solid fa-diagram-project"></i> Projects
+          <i class="fas fa-chevron-down arrow"></i>
+        </a>
+        <div class="projects-dropdown-content">
+          <!-- Project drop down area -->
+        </div>
+      </div>
+
+      <div>
+        <a class="nav-link scroll" href="#skills"
+          ><i class="fa-solid fa-rocket"></i> Skills</a
+        >
+      </div>
+      <div>
+        <a class="nav-link scroll" href="#resume"
+          ><i class="fa-solid fa-file"></i> Resume</a
+        >
+      </div>
+      <div>
+        <a class="nav-link scroll" href="#about"
+          ><i class="fa-solid fa-person-dress"></i> About</a
+        >
+      </div>
+
+      <div class="search-box">
+        <div class="input-wrapper">
+          <input
+            type="text"
+            id="input-box"
+            placeholder="ex: Javascript"
+            autocomplete="off"
+          />
+          <div class="button-wrapper">
+            <button class="clear-button hidden" aria-label="Clear" tabindex="0">
+              X
+            </button>
+            <button class="search-button" onclick="search()">
+              <i class="fa-solid fa-search"></i>
+            </button>
+          </div>
+        </div>
+        <div class="result-box"></div>
+      </div>
+      <div class="searchandmicrophone">
+        <button class="search-button-init" onclick="openSearchBox()">
+          <i class="fa-solid fa-search"></i>
+        </button>
+        <button id="microphone-button" onclick="startListeningAndOpenSearch()">
+          <i class="fa-solid fa-microphone"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="hamburger-container">
+        <button class="hamburger">
+          <div class="bar"></div>
+        </button>
+      </div>
+      <nav class="nav-mobile">
+        <a class="home scroll" href="#home"
+          ><i class="fa-solid fa-house"></i> Home</a
+        >
+        <a class="about scroll selected-project" href="#projects">
+          <i class="fa-solid fa-diagram-project"></i> Projects</a
+        >
+        <a class="skills scroll selected-project" href="#skills"
+          ><i class="fa-solid fa-rocket"></i> Skills</a
+        >
+        <a class="resume scroll selected-project" href="#resume"
+          ><i class="fa-solid fa-file"></i> Resume</a
+        >
+        <a class="about scroll selected-project" href="#about"
+          ><i class="fa-solid fa-person-dress"></i> About</a
+        >
+      </nav>
     </div>
   </body>
 </html>
