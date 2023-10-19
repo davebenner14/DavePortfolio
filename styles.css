@@ -90,3 +90,21 @@ input#input-box:focus-within {
 input#input-box:focus::placeholder {
   color: transparent;
 }
+#intro-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.intro-name {
+  font-size: 4em;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.intro-role {
+  font-size: 2em;
+  color: white;
+}
