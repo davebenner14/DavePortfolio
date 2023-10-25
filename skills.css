@@ -1,0 +1,42 @@
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 750px;
+  width: 100%;
+  padding: 10px;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filter-button {
+  color: rgb(255, 255, 255);
+  background-color: var(--teal);
+  text-decoration: none;
+  padding: 8px 16px;
+  margin: 0 8px;
+  border-radius: 20px;
+  border: 1px solid rgb(255, 255, 255);
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.filter-button.active {
+  color: var(--navy);
+  background-color: white;
+}
+
+.filter-button:hover {
+  color: var(--navy);
+  background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .filter-button {
+    font-size: 8px;
+  }
+}
