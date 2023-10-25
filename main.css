@@ -1,0 +1,13 @@
+.section-title {
+  display: grid;
+  grid-template-columns: 1fr 30% 1fr; /* Adjusted to percentage for the text */
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+}
+
+.line {
+  width: 100%; /* Ensure the lines take up all the available space in their grid area */
+  height: 1px;
+  background-color: #ffffff;
+}
