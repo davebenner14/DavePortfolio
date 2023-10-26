@@ -47,7 +47,7 @@
   width: 300px;
   border: 1px solid #e0e0e0;
   position: relative;
-  padding-top: 30px;
+  transition: transform 0.3s;
 }
 
 .project-screenshot {
@@ -67,6 +67,10 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  transition-delay: 0s, 0s;
 }
 
 .project-description h3 {
@@ -88,5 +92,29 @@
 }
 
 .projects-filter-buttons {
-  padding-bottom: 20px; /* Adjust the value as desired */
+  padding-bottom: 20px;
+}
+
+.project-screenshot {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: 0.3s;
+}
+
+.project-card:hover .project-description {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s, 0s;
+}
+
+.project-card:hover .project-screenshot {
+  transform: scale(1.05);
+}
+
+.project-card:not(:hover) .project-description {
+  transition-delay: 5s, 5s;
+}
+.project-card:hover {
+  transform: scale(1.05);
 }
