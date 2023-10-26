@@ -5,10 +5,10 @@ const roles = [
   "Full Stack Developer",
   "Website Developer",
   "Problem Solver",
-  "Coffee-Enthusiast",
+  "Coffee Enthusiast",
   "Gamer",
   "Cat Dad",
-  "Game Presserverist"
+  "Game Preservationist"
 ];
 
 /*------------ Variables ------------*/
