@@ -9,17 +9,21 @@
     <link rel="stylesheet" href="footer.css" />
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="skills.css" />
+    <link rel="stylesheet" href="project.css" />
+
 
 
     <script
       src="https://kit.fontawesome.com/0eb0729b63.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script defer src="navbarSearch.js"></script>
     <script defer src="JS/roles.js"></script>
     <script defer src="JS/filterSkills.js"></script>
     <script defer src="JS/filterAbout.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="JS/filterProjects.js"></script>
+
 
 
 
@@ -124,15 +128,43 @@
       <h2 class="intro-role"><span id="roles"></span></h2>
     </section>
 
-    <!-- Project Section -->
-    <section>
-      <section id="projects" class="section">
-        <p class="title">
-          <span class="line"></span>
-          <span>Projects</span>
-          <span class="line"></span>
-        </p>
-    </section>
+<!-- Project Section -->
+<section id="projects" class="section">
+  <p class="title">
+      <span class="line"></span>
+      <span>Projects</span>
+      <span class="line"></span>
+  </p>
+
+<!-- Organize By Section -->
+<div class="organize-by">
+  <span class="organize-text">Organize by:</span>
+  <div class="organize-buttons">
+      <button class="filter-button" onclick="showGenres()">Genre</button>
+      <button class="filter-button" onclick="showLanguages()">Language</button>
+  </div>
+</div>
+
+
+  <!-- Genre Buttons (Visible by default) -->
+  <div id="genres" class="projects-filter-buttons">
+      <button class="projects-filter-button filter-button" data-filter="featured">Featured</button>
+      <button class="projects-filter-button filter-button" data-filter="frontend">Frontend</button>
+      <button class="projects-filter-button filter-button" data-filter="fullstack">Fullstack</button>
+      <button class="projects-filter-button filter-button" data-filter="games">Games</button>
+      <button class="projects-filter-button filter-button" data-filter="crud">CRUD</button>
+  </div>
+
+  <!-- Language Buttons (Initially hidden) -->
+  <div id="languages" class="projects-filter-buttons" style="display: none;">
+      <button class="projects-filter-button filter-button" data-filter="javascript">Javascript</button>
+      <button class="projects-filter-button filter-button" data-filter="vue">Vue</button>
+      <button class="projects-filter-button filter-button" data-filter="php">PHP</button>
+      <button class="projects-filter-button filter-button" data-filter="python">Python</button>
+      <button class="projects-filter-button filter-button" data-filter="react">React</button>
+  </div>
+</section>
+
 
     <!-- Skills Section -->
     <section id="skills" class="section">
