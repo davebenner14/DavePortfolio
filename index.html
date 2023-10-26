@@ -147,21 +147,23 @@
 
 <!-- Genre Buttons (Initially hidden) -->
 <div id="genres" class="projects-filter-buttons" style="display: none;">
-    <button class="projects-filter-button filter-button" data-filter="featured">Featured</button>
-    <button class="projects-filter-button filter-button" data-filter="frontend">Frontend</button>
-    <button class="projects-filter-button filter-button" data-filter="fullstack">Fullstack</button>
-    <button class="projects-filter-button filter-button" data-filter="games">Games</button>
-    <button class="projects-filter-button filter-button" data-filter="crud">CRUD</button>
+  <button class="projects-filter-button filter-button" data-filter="featured" onclick="console.log('Featured clicked'); filterProjects('featured', null)">Featured</button>
+  <button class="projects-filter-button filter-button" data-filter="frontend" onclick="console.log('Frontend clicked'); filterProjects('frontend', null)">Frontend</button>
+  <button class="projects-filter-button filter-button" data-filter="fullstack" onclick="console.log('Fullstack clicked'); filterProjects('fullstack', null)">Fullstack</button>
+  <button class="projects-filter-button filter-button" data-filter="games" onclick="console.log('Games clicked'); filterProjects('games', null)">Games</button>
+  <button class="projects-filter-button filter-button" data-filter="crud" onclick="console.log('CRUD clicked'); filterProjects('crud', null)">CRUD</button>
 </div>
+
 
 <!-- Language Buttons (Initially hidden) -->
 <div id="languages" class="projects-filter-buttons" style="display: none;">
-    <button class="projects-filter-button filter-button" data-filter="javascript">Javascript</button>
-    <button class="projects-filter-button filter-button" data-filter="vue">Vue</button>
-    <button class="projects-filter-button filter-button" data-filter="php">PHP</button>
-    <button class="projects-filter-button filter-button" data-filter="python">Python</button>
-    <button class="projects-filter-button filter-button" data-filter="react">React</button>
+  <button class="projects-filter-button filter-button" data-filter="javascript" onclick="console.log('Javascript clicked'); filterProjects(null, 'javascript')">Javascript</button>
+  <button class="projects-filter-button filter-button" data-filter="vue" onclick="console.log('Vue clicked'); filterProjects(null, 'vue')">Vue</button>
+  <button class="projects-filter-button filter-button" data-filter="php" onclick="console.log('PHP clicked'); filterProjects(null, 'php')">PHP</button>
+  <button class="projects-filter-button filter-button" data-filter="python" onclick="console.log('Python clicked'); filterProjects(null, 'python')">Python</button>
+  <button class="projects-filter-button filter-button" data-filter="react" onclick="console.log('React clicked'); filterProjects(null, 'react')">React</button>
 </div>
+
 
   <!-- Project Gallery -->
   <div class="project-gallery">
