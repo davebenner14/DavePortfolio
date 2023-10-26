@@ -16,7 +16,17 @@
   font-size: 1.17em;
   width: 60%;
   margin: 0 auto;
+  margin-top: 20px;
 }
 #about p {
   margin-bottom: 20px;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  user-select: none;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
 }
