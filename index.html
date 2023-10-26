@@ -18,6 +18,10 @@
     <script defer src="navbarSearch.js"></script>
     <script defer src="JS/roles.js"></script>
     <script defer src="JS/filterSkills.js"></script>
+    <script defer src="JS/filterAbout.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
 
   </head>
   <body>
@@ -302,6 +306,7 @@
       </div>
     </section>
 
+
 <!-- Resume Section -->
 <section id="resume" class="section">
   <p class="title">
@@ -325,14 +330,65 @@
   </div>
 </section>
 
-<!-- About Section -->
+<!-- About Me Section -->
 <section id="about" class="section">
   <p class="title">
-      <span class="line"></span>
-      <span>About Dave</span>
-      <span class="line"></span>
+    <span class="line"></span>
+    <span>About Me</span>
+    <span class="line"></span>
   </p>
+
+  <!-- Your profile photo -->
+  <img
+    id="profile-photo"
+    src="assets/images/IMG_4761.PNG"
+    alt="David Benner"  
+  />
+
+  <div class="filter-buttons">
+    <button class="filter-button active" data-filter="short">Short Version</button>
+    <button class="filter-button" data-filter="long">Long Version</button>
+  </div>
+
+  <!-- Short Version -->
+  <div class="about-content" id="short-version">
+    <p>
+      I am a passionate web developer experienced in both front-end and back-end technologies. I have a deep love for solving complex problems and thrive when working within collaborative teams.
+    </p>
+    <p>
+      After many years as a pilot, I decided to transition careers. My journey into the world of code began in 2019. By 2021, I was deeply immersed in it and eventually graduated from a full-stack bootcamp at General Assembly.
+    </p>
+    <p>
+      As a highly motivated and creative full-stack software engineer, I bring a blend of attention to detail, exceptional problem-solving skills, and effective communication. I am skilled in HTML, CSS, JavaScript, Python, Express, and React. My motivation stems from a profound desire to craft visually appealing and functional solutions for clients.
+    </p>
+  </div>
+
+  <!-- Long Version -->
+  <div class="about-content hidden" id="long-version">
+    <p>
+      I attended Wilfrid Laurier University, where I played football at a collegiate level. I graduated with a double major degree in Political Science and Philosophy. 
+    </p>
+    <p>
+      After graduation, I moved to Alberta and started working for Axis Energy in the field of directional drilling. For those unfamiliar with the term, directional drilling is a complex method of drilling wells at multiple angles, not just vertically. This process requires advanced math, technology, and problem-solving skills, drawing parallels to the intricate nature of coding and technology development.
+    </p>
+    <p>
+      After a few years in Alberta, I returned to Ontario to assist a close friend with his start-up company named Simply Smart Home. The company specializes in integrating both hardware and software into homes to create a seamless smart home experience. As a manager, I was responsible for overseeing the sales and installation teams, ensuring our clients received top-tier services.
+    </p>
+    <p>
+      Around the same period, I embarked on a real estate venture, focusing specifically on purpose-built rentals. These properties are designed from the outset to serve as rental units, akin to apartment buildings. This strategic decision underscores my commitment to not diverting housing away from individuals or families looking to purchase homes for themselves. I am deeply cognizant of the housing challenges many face, and it's vital for me to ensure that my business endeavors do not contribute to these issues. This venture has since grown, and I now collaborate with partners and an expanded team, continuously scaling our operations while maintaining this ethical stance.
+    </p>
+    <p>
+      My career took another exciting turn when I transitioned to aviation. In a notably short span of time, I obtained my Commercial Multi-engine IFR pilot license. Flying remains a significant passion of mine to this day.
+    </p>
+    <p>
+      It was in 2019 when I first dabbled in coding. The more I immersed myself, the more captivated I became. This newfound passion led me to enroll in the General Assembly bootcamp in 2021. Ever since, I've been on a relentless quest, challenging myself daily to expand my coding knowledge and skills.
+    </p>
+</div>
+
+
 </section>
+
+
 
 <!-- Footer with email github and linkedin -->
 <div class="footer">

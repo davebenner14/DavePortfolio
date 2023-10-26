@@ -11,3 +11,12 @@
   height: 1px;
   background-color: #ffffff;
 }
+.about-content p {
+  text-align: center;
+  font-size: 1.17em;
+  width: 60%;
+  margin: 0 auto;
+}
+#about p {
+  margin-bottom: 20px;
+}
