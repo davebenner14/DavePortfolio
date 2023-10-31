@@ -13,7 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
     react: "assets/icons/react.png",
     node: "assets/icons/node.png",
     mongodb: "assets/icons/mongodb.png",
-    expressjs: "assets/icons/Expressjs.png"
+    expressjs: "assets/icons/Expressjs.png",
+    django: "assets/icons/django.png",
+    aws: "assets/icons/aws.png",
+    python: "assets/icons/python.png"
   };
 
   const docMapping = {
@@ -30,7 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
     react: "https://reactjs.org/",
     node: "https://nodejs.org/en/docs/",
     mongodb: "https://docs.mongodb.com/",
-    expressjs: "https://expressjs.com/"
+    expressjs: "https://expressjs.com/",
+    django: "https://docs.djangoproject.com/en/stable/",
+    aws: "https://aws.amazon.com/documentation/",
+    python: "https://docs.python.org/3/"
   };
 
   const projectCards = document.querySelectorAll(".project-card");
