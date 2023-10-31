@@ -38,6 +38,10 @@ document.addEventListener("DOMContentLoaded", function () {
         img.src = iconMapping[lang];
         img.alt = `${lang} icon`;
 
+        if (lang === "sqlite" || lang === "tailwind") {
+          img.classList.add("white-background-icon");
+        }
+
         if (lang === "vercel") {
           img.classList.add("vercel-icon");
         }
@@ -46,22 +50,23 @@ document.addEventListener("DOMContentLoaded", function () {
         iconContainer.appendChild(anchor);
       }
     });
-  });
 
-  const projectScreenshots = document.querySelectorAll(".project-screenshot");
+    card.addEventListener("mouseover", function () {
+      // Hide icons and buttons from other projects
+      projectCards.forEach((otherCard) => {
+        if (otherCard !== card) {
+          const otherIcons = otherCard.querySelector(".tech-icons");
+          const otherButtons = otherCard.querySelector(".project-buttons");
+          otherIcons.style.opacity = "0";
+          otherButtons.style.opacity = "0";
+        }
+      });
 
-  projectScreenshots.forEach((screenshot) => {
-    screenshot.addEventListener("mouseover", function () {
-      const icons = this.nextElementSibling;
-      const buttons = icons.nextElementSibling;
-
+      // Show icons and buttons for the currently hovered project
+      const icons = card.querySelector(".tech-icons");
+      const buttons = card.querySelector(".project-buttons");
       icons.style.opacity = "1";
       buttons.style.opacity = "1";
-
-      setTimeout(() => {
-        icons.style.opacity = "0";
-        buttons.style.opacity = "0";
-      }, 5000);
     });
   });
 });

@@ -87,7 +87,7 @@
 }
 
 .projects-filter-buttons {
-  padding-bottom: 20px;
+  padding-bottom: 60px;
 }
 
 .project-screenshot {
@@ -115,12 +115,27 @@
 }
 .tech-icons,
 .project-buttons {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s; /* Add transition for smooth effect */
+  transition-delay: 5s, 5s;
 }
 .project-card:hover .tech-icons,
 .project-card:hover .project-buttons {
+  transition-delay: 0s, 0s;
+}
+
+.dark-description p {
+  color: black;
+}
+.white-background-icon {
+  background-color: white;
+  border-radius: 4px;
+}
+.project-card:hover ~ .project-card .tech-icons,
+.project-card:hover ~ .project-card .project-buttons {
+  opacity: 0;
+  visibility: hidden;
+}
+.project-card.active .tech-icons,
+.project-card.active .project-buttons {
   opacity: 1;
   visibility: visible;
 }
