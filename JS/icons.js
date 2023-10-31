@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
     php: "assets/icons/php.png",
     sqlite: "assets/icons/SQlite.png",
     tailwind: "assets/icons/tailwind.png",
-    phaser: "assets/icons/phaser.png" // Added Phaser icon path
+    phaser: "assets/icons/phaser.png",
+    vue: "assets/icons/vue.png"
   };
 
   const docMapping = {
@@ -20,7 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
     php: "https://www.php.net/manual/en/",
     sqlite: "https://sqlite.org/docs.html",
     tailwind: "https://tailwindcss.com/docs",
-    phaser: "https://phaser.io/docs/2.6.2/index" // Added Phaser documentation link
+    phaser: "https://phaser.io/docs/2.6.2/index",
+    vue: "https://vuejs.org"
   };
 
   const projectCards = document.querySelectorAll(".project-card");
