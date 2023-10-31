@@ -9,7 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
     sqlite: "assets/icons/SQlite.png",
     tailwind: "assets/icons/tailwind.png",
     phaser: "assets/icons/phaser.png",
-    vue: "assets/icons/vue.png"
+    vue: "assets/icons/vue.png",
+    react: "assets/icons/react.png",
+    node: "assets/icons/node.png",
+    mongodb: "assets/icons/mongodb.png",
+    expressjs: "assets/icons/Expressjs.png"
   };
 
   const docMapping = {
@@ -22,7 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
     sqlite: "https://sqlite.org/docs.html",
     tailwind: "https://tailwindcss.com/docs",
     phaser: "https://phaser.io/docs/2.6.2/index",
-    vue: "https://vuejs.org"
+    vue: "https://vuejs.org",
+    react: "https://reactjs.org/",
+    node: "https://nodejs.org/en/docs/",
+    mongodb: "https://docs.mongodb.com/",
+    expressjs: "https://expressjs.com/"
   };
 
   const projectCards = document.querySelectorAll(".project-card");
