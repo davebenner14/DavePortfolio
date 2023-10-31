@@ -18,22 +18,15 @@ function filterProjects(genre, language) {
     const cardGenre = card.getAttribute("data-genre");
     const cardLanguage = card.getAttribute("data-language");
 
-    let shouldShow = false;
+    let shouldShow = true; // By default, set to true, we'll turn it to false if conditions aren't met
 
-    // If a genre is provided and matches the card's genre, set shouldShow to true
-    if (genre && cardGenre.includes(genre)) {
-      shouldShow = true;
-      console.log(`Matched by genre: ${cardGenre}`); // Log the matching genre
+    // If a genre is provided and doesn't match the card's genre, set shouldShow to false
+    if (genre && !cardGenre.includes(genre)) {
+      shouldShow = false;
     }
 
-    // If a language is provided and matches the card's language, set shouldShow to true
-    if (language && cardLanguage.includes(language)) {
-      shouldShow = true;
-      console.log(`Matched by language: ${cardLanguage}`); // Log the matching language
-    }
-
-    // If neither genre nor language is provided/matched, hide the card
-    if (!genre && !language) {
+    // If a language is provided and doesn't match the card's language, set shouldShow to false
+    if (language && !cardLanguage.includes(language)) {
       shouldShow = false;
     }
 
