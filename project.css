@@ -6,7 +6,7 @@
 
 .organize-by {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,17 +37,14 @@
 
 .project-gallery {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  padding-top: 20px;
+  flex-direction: column;
+  gap: 120px;
 }
 
 .project-card {
   width: 300px;
   border: 1px solid #e0e0e0;
   position: relative;
-  transition: transform 0.3s;
 }
 
 .project-screenshot {
@@ -62,7 +59,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  /* background: rgba(0, 0, 0, 0.3); */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -70,7 +66,6 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
-  transition-delay: 0s, 0s;
 }
 
 .project-description h3 {
@@ -105,7 +100,6 @@
 .project-card:hover .project-description {
   opacity: 1;
   visibility: visible;
-  transition-delay: 0s, 0s;
 }
 
 .project-card:hover .project-screenshot {
@@ -115,6 +109,18 @@
 .project-card:not(:hover) .project-description {
   transition-delay: 5s, 5s;
 }
+
 .project-card:hover {
   transform: scale(1.05);
+}
+.tech-icons,
+.project-buttons {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s; /* Add transition for smooth effect */
+}
+.project-card:hover .tech-icons,
+.project-card:hover .project-buttons {
+  opacity: 1;
+  visibility: visible;
 }
