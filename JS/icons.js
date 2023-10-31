@@ -6,6 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
     vercel: "assets/icons/vercel.png"
   };
 
+  const docMapping = {
+    javascript: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    html: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    css: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    vercel: "https://vercel.com/docs"
+    // ... add more mappings here as needed
+  };
+
   const projectCards = document.querySelectorAll(".project-card");
 
   projectCards.forEach((card) => {
@@ -14,6 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     languages.forEach((lang) => {
       if (iconMapping[lang]) {
+        const anchor = document.createElement("a");
+        anchor.href = docMapping[lang];
+        anchor.target = "_blank";
+        anchor.rel = "noopener noreferrer";
+
         const img = document.createElement("img");
         img.src = iconMapping[lang];
         img.alt = `${lang} icon`;
@@ -22,25 +35,26 @@ document.addEventListener("DOMContentLoaded", function () {
           img.classList.add("vercel-icon");
         }
 
-        iconContainer.appendChild(img);
+        anchor.appendChild(img);
+        iconContainer.appendChild(anchor);
       }
     });
   });
-});
 
-const projectScreenshots = document.querySelectorAll(".project-screenshot");
+  const projectScreenshots = document.querySelectorAll(".project-screenshot");
 
-projectScreenshots.forEach((screenshot) => {
-  screenshot.addEventListener("mouseover", function () {
-    const icons = this.nextElementSibling;
-    const buttons = icons.nextElementSibling;
+  projectScreenshots.forEach((screenshot) => {
+    screenshot.addEventListener("mouseover", function () {
+      const icons = this.nextElementSibling;
+      const buttons = icons.nextElementSibling;
 
-    icons.style.opacity = "1";
-    buttons.style.opacity = "1";
+      icons.style.opacity = "1";
+      buttons.style.opacity = "1";
 
-    setTimeout(() => {
-      icons.style.opacity = "0";
-      buttons.style.opacity = "0";
-    }, 5000);
+      setTimeout(() => {
+        icons.style.opacity = "0";
+        buttons.style.opacity = "0";
+      }, 5000);
+    });
   });
 });
