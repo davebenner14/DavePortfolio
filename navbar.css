@@ -262,3 +262,77 @@ main {
 .hide {
   display: none;
 }
+
+.project-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.project-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--darkteal);
+  min-width: 200px;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.project-dropdown-content a {
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  border-radius: 20px;
+  transition: ease 0.5s;
+}
+
+.project-dropdown-content a:hover {
+  background-color: var(--lightteal);
+}
+
+.project-dropdown:hover .project-dropdown-content {
+  display: block;
+}
+
+.dropdown-toggle:hover {
+  background-color: var(--lightteal);
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between items */
+}
+
+.projects-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.projects-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--darkteal);
+  border-radius: 20px;
+  min-width: 300px;
+  z-index: 1;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.projects-dropdown-content a {
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+  border-radius: 20px;
+  transition: ease 0.5s;
+}
+
+.projects-dropdown-content a:hover {
+  background-color: var(--lightteal);
+}
+
+.projects-dropdown:hover .projects-dropdown-content {
+  display: block;
+}
