@@ -231,7 +231,7 @@ main {
 }
 
 .title {
-  border-bottom: 2px solid var(--navy);
+  /* border-bottom: 2px solid var(--navy); */
   font-size: 48px;
   line-height: 0.1em;
   max-width: 1200px;
