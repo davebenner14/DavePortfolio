@@ -369,24 +369,22 @@ nav {
   transform: translateY(10px);
 }
 
-/* Styling for the mobile menu when it is open */
 .nav-mobile {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fff; /* Background color for the mobile menu */
+  background-color: #fff;
 }
 
-/* Only display the hamburger container on mobile */
 @media (max-width: 768px) {
   .hamburger-container {
     display: block;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 10000;
   }
 
   .nav-mobile {
@@ -428,6 +426,7 @@ nav {
   background-color: white;
   transition: 0.4s;
   position: relative;
+  z-index: 10000;
 }
 
 .hamburger::before,
@@ -452,13 +451,14 @@ nav {
 
 .nav-mobile {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: black;
   color: white;
   font-size: 1em;
+  z-index: 9999;
 }
 
 .nav-mobile a {
