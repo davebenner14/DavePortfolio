@@ -26,6 +26,8 @@
     <script defer src="JS/filterAbout.js"></script>
     <script defer src="JS/filterProjects.js"></script>
     <script defer src="JS/icons.js"></script>
+    <script defer src="JS/hamburger.js"></script>
+
 
 
 
@@ -35,104 +37,69 @@
   <body>
     <!-- Navbar with search and microphone -->
     <nav id="nav-computer">
-      <div>
-        <a class="nav-link scroll" href="#intro-section">
-            <i class="fa-solid fa-house"></i> Home
-        </a>
-    </div>
-    <div class="projects-dropdown">
-      <a class="nav-link" href="#">Projects <i class="fas fa-chevron-down arrow"></i></a>
-      <div class="projects-dropdown-content">
-        <a href="#pixel-packer">PixelPacker - a TETЯIS Game</a>
-        <a href="#chapter-chat">Chapter Chat</a>
-        <a href="#strike-wing">Strike Wing</a>
-        <a href="#nespresso-plus-mock">Nespresso Plus Mock</a>
-      </div>
-    </div>
-    
-    
-    
-
-      <div>
-        <a class="nav-link scroll" href="#skills"
-          ><i class="fa-solid fa-rocket"></i> Skills</a
-        >
-      </div>
-      <div>
-        <a class="nav-link scroll" href="#resume"
-          ><i class="fa-solid fa-file"></i> Resume</a
-        >
-      </div>
-      <div>
-        <a class="nav-link scroll" href="#about"
-          ><i class="fa-solid fa-person-dress"></i> About</a
-        >
-      </div>
-
-      <div class="search-box">
-        <div class="input-wrapper">
-          <input
-            type="text"
-            id="input-box"
-            placeholder="ex: Javascript"
-            autocomplete="off"
-          />
-          <div class="button-wrapper">
-            <button class="clear-button hidden" aria-label="Clear" tabindex="0">
-              X
-            </button>
-            <button class="search-button" onclick="search()">
-              <i class="fa-solid fa-search"></i>
-            </button>
-          </div>
+        <div>
+            <a class="nav-link scroll" href="#intro-section">
+                <i class="fa-solid fa-house"></i> Home
+            </a>
         </div>
-        <div class="result-box"></div>
-      </div>
-      <div class="searchandmicrophone">
-        <button class="search-button-init" onclick="openSearchBox()">
-          <i class="fa-solid fa-search"></i>
-        </button>
-        <button id="microphone-button" onclick="startListeningAndOpenSearch()">
-          <i class="fa-solid fa-microphone"></i>
-        </button>
-      </div>
+        <div class="projects-dropdown">
+            <a class="nav-link" href="#">Projects <i class="fas fa-chevron-down arrow"></i></a>
+            <div class="projects-dropdown-content">
+                <a href="#pixel-packer">PixelPacker - a TETЯIS Game</a>
+                <a href="#chapter-chat">Chapter Chat</a>
+                <a href="#strike-wing">Strike Wing</a>
+                <a href="#nespresso-plus-mock">Nespresso Plus Mock</a>
+            </div>
+        </div>
+        <div>
+            <a class="nav-link scroll" href="#skills"><i class="fa-solid fa-rocket"></i> Skills</a>
+        </div>
+        <div>
+            <a class="nav-link scroll" href="#resume"><i class="fa-solid fa-file"></i> Resume</a>
+        </div>
+        <div>
+            <a class="nav-link scroll" href="#about"><i class="fa-solid fa-person-dress"></i> About</a>
+        </div>
+        <div class="search-box">
+            <div class="input-wrapper">
+                <input type="text" id="input-box" placeholder="ex: Javascript" autocomplete="off" />
+                <div class="button-wrapper">
+                    <button class="clear-button hidden" aria-label="Clear" tabindex="0">X</button>
+                    <button class="search-button" onclick="search()"><i class="fa-solid fa-search"></i></button>
+                </div>
+            </div>
+            <div class="result-box"></div>
+        </div>
+        <div class="searchandmicrophone">
+            <button class="search-button-init" onclick="openSearchBox()"><i class="fa-solid fa-search"></i></button>
+            <button id="microphone-button" onclick="startListeningAndOpenSearch()"><i class="fa-solid fa-microphone"></i></button>
+        </div>
     </nav>
 
     <div class="container">
-      <div class="hamburger-container">
-        <button class="hamburger">
-          <div class="bar"></div>
-        </button>
-      </div>
-      <nav class="nav-mobile">
-        <a class="home scroll" href="#home"
-          ><i class="fa-solid fa-house"></i> Home</a
-        >
-        <a class="about scroll selected-project" href="#projects">
-          <i class="fa-solid fa-diagram-project"></i> Projects</a
-        >
-        <a class="skills scroll selected-project" href="#skills"
-          ><i class="fa-solid fa-rocket"></i> Skills</a
-        >
-        <a class="resume scroll selected-project" href="#resume"
-          ><i class="fa-solid fa-file"></i> Resume</a
-        >
-        <a class="about scroll selected-project" href="#about"
-          ><i class="fa-solid fa-person-dress"></i> About</a
-        >
-      </nav>
+        <div class="hamburger-container">
+            <button class="hamburger">
+                <div class="bar"></div>
+            </button>
+        </div>
+        <nav class="nav-mobile">
+            <a class="home scroll" href="#intro-section"><i class="fa-solid fa-house"></i> Home</a>
+            <a class="about scroll selected-project" href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+            <a class="skills scroll selected-project" href="#skills"><i class="fa-solid fa-rocket"></i> Skills</a>
+            <a class="resume scroll selected-project" href="#resume"><i class="fa-solid fa-file"></i> Resume</a>
+            <a class="about scroll selected-project" href="#about"><i class="fa-solid fa-person-dress"></i> About</a>
+        </nav>
     </div>
 
     <!-- Header Section -->
     <section id="intro-section">
-      <img
-        id="profile-photo"
-        src="assets/images/119465113.jpeg"
-        alt="David Benner"
-      />
-      <h1 class="intro-name">David Benner</h1>
-      <h2 class="intro-role"><span id="roles"></span></h2>
+        <img id="profile-photo" src="assets/images/119465113.jpeg" alt="David Benner" />
+        <h1 class="intro-name">David Benner</h1>
+        <h2 class="intro-role"><span id="roles"></span></h2>
     </section>
+</body>
+
+</body>
 
 <!-- Project Section -->
 <section id="projects" class="section">
