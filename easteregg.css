@@ -1,0 +1,10 @@
+.easter-egg {
+  text-align: center;
+  margin: 200px 0;
+}
+
+.easter-egg img {
+  width: 50px;
+  height: auto;
+  display: inline-block;
+}
