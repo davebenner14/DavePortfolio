@@ -37,6 +37,15 @@
 
 @media screen and (max-width: 768px) {
   .filter-button {
-    font-size: 8px;
+    font-size: 16px;
+    margin: 5px;
+  }
+  .project-screenshot {
+    max-width: 80%;
+    margin: 10px auto; /* Center the image horizontally */
+    display: block; /* Make sure the image is a block-level element */
+  }
+  .project-card {
+    border: none;
   }
 }

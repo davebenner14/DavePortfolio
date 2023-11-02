@@ -30,3 +30,35 @@ body {
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
 }
+@media (max-width: 600px) {
+  .intro-name {
+    font-size: calc(100%);
+    text-align: center;
+  }
+
+  .intro-role {
+    font-size: calc(100% - 3vw);
+    text-align: center;
+  }
+
+  .projects-filter-buttons,
+  .skills-filter-buttons,
+  .about-filter-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projects-filter-button,
+  .skills-filter-button,
+  .about-filter-button {
+    margin: 5px;
+    font-size: calc(100% - 1vw);
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .project-gallery .icon {
+    font-size: calc(100% - 2vw);
+  }
+}
