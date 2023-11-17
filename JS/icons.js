@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     sqlite: "assets/icons/SQlite.png",
     tailwind: "assets/icons/tailwind.png",
     phaser: "assets/icons/phaser.png",
-    vue: "assets/icons/vue.png",
+    vue: "assets/icons/Vue.png",
     react: "assets/icons/react.png",
     node: "assets/icons/node.png",
     mongodb: "assets/icons/mongodb.png",
