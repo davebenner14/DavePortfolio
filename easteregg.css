@@ -10,11 +10,10 @@
   display: inline-block;
 }
 
-/* Style the text box */
 .easter-egg-text {
   display: none;
   position: absolute;
-  top: -70px; /* Move the text box above the image by adjusting the top value */
+  top: -200px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #000;
@@ -26,12 +25,10 @@
   border-radius: 5px;
 }
 
-/* Change cursor to pointer on hover */
 .easter-egg:hover {
   cursor: pointer;
 }
 
-/* Show the text box on hover */
 .easter-egg:hover .easter-egg-text {
   display: block;
 }
