@@ -1,7 +1,8 @@
 .easter-egg {
   text-align: center;
-  margin: 200px 0;
+  margin: 200px 20px; /* Add 20px margin on both sides */
   position: relative;
+  overflow: hidden; /* Add this to hide overflowing content */
 }
 
 .easter-egg img {
@@ -23,6 +24,12 @@
   font-family: "Press Start 2P", monospace;
   font-size: 16px;
   border-radius: 5px;
+  max-width: calc(
+    100% - 40px
+  ); /* Set maximum width to 100% minus 40px (20px margin on both sides) */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis (...) for hidden text */
 }
 
 .easter-egg:hover {
