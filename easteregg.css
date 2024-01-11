@@ -1,6 +1,7 @@
 .easter-egg {
   text-align: center;
   margin: 200px 0;
+  position: relative; /* Add this to make the text box position relative to the easter-egg div */
 }
 
 .easter-egg img {
@@ -9,19 +10,28 @@
   display: inline-block;
 }
 
-/* Hide the text box by default */
+/* Style the text box */
 .easter-egg-text {
   display: none;
   position: absolute;
-  background-color: #ffc107; /* Yellow background color */
-  color: #000; /* Black text color */
-  border: 2px solid #000; /* Black border */
+  top: -50px; /* Move the text box above the image */
+  left: 50%; /* Center the text box horizontally */
+  transform: translateX(-50%); /* Centering trick */
+  background-color: #000; /* Black background color */
+  color: #fff; /* White text color */
+  border: 2px solid #fff; /* White border */
   padding: 10px;
-  font-family: "Press Start 2P", cursive; /* Use a Super Nintendo-like font */
+  font-family: "Press Start 2P", monospace; /* Use a pixelated font */
   font-size: 16px;
+  border-radius: 5px; /* Add rounded corners */
 }
 
 /* Change cursor to pointer on hover */
 .easter-egg:hover {
   cursor: pointer;
+}
+
+/* Show the text box on hover */
+.easter-egg:hover .easter-egg-text {
+  display: block;
 }
