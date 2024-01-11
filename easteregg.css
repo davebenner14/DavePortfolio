@@ -1,8 +1,7 @@
 .easter-egg {
   text-align: center;
-  margin: 200px 20px;
+  margin: 200px 0;
   position: relative;
-  overflow: hidden;
 }
 
 .easter-egg img {
@@ -14,7 +13,7 @@
 .easter-egg-text {
   display: none;
   position: absolute;
-  top: -150px;
+  top: -200px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #000;
@@ -24,9 +23,6 @@
   font-family: "Press Start 2P", monospace;
   font-size: 16px;
   border-radius: 5px;
-  max-width: calc(100% - 40px);
-  white-space: normal;
-  overflow: hidden;
 }
 
 .easter-egg:hover {
