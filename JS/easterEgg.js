@@ -8,19 +8,25 @@ document.addEventListener("DOMContentLoaded", function () {
     clickCount++;
 
     if (clickCount === 1) {
-      // Animate Mario GIF
+      // Display Mario GIF
       marioGif.style.display = "block";
-      // Example animation: move Mario from left to center
+
+      // Animate Mario walking from left to right
       marioGif.animate(
-        [{ transform: "translateX(-100%)" }, { transform: "translateX(0)" }],
+        [
+          { left: "0" },
+          { left: "50%" } // Adjust final position under the box
+        ],
         {
-          duration: 1000, // Animation duration in milliseconds
-          fill: "forwards" // Keeps the state at the end of the animation
+          duration: 3000, // 3 seconds
+          fill: "forwards"
         }
-      ).onfinish = () => {
-        // Show text box after Mario animation finishes
+      );
+
+      // Wait 3 seconds, then show text box
+      setTimeout(() => {
         easterEggText.style.display = "block";
-      };
+      }, 3000);
     } else if (clickCount === 2) {
       activateFunMode();
       easterEggText.style.display = "none";
