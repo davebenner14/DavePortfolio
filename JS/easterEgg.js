@@ -1,12 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
   const easterEgg = document.querySelector(".easter-egg");
-  const easterEggText = document.querySelector(".easter-egg-text");
+  let isEasterEggVisible = false;
 
-  easterEgg.addEventListener("mouseenter", function () {
-    easterEggText.style.display = "block";
-  });
-
-  easterEgg.addEventListener("mouseleave", function () {
-    easterEggText.style.display = "none";
+  easterEgg.addEventListener("click", function () {
+    isEasterEggVisible = !isEasterEggVisible;
+    easterEgg.querySelector(".easter-egg-text").style.display =
+      isEasterEggVisible ? "block" : "none";
   });
 });

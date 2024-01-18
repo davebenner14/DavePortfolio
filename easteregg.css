@@ -1,6 +1,6 @@
 .easter-egg {
   text-align: center;
-  margin: 200px 0;
+  margin: 50px auto; /* Adjusted margin for better positioning */
   position: relative;
 }
 
@@ -13,25 +13,22 @@
 .easter-egg-text {
   display: none;
   position: absolute;
-  top: -200px;
+  top: 60px; /* Adjusted to appear below the image */
   left: 50%;
   transform: translateX(-50%);
   background-color: #000;
   color: #fff;
   border: 2px solid #fff;
-  padding: 10px;
+  padding: 15px; /* Increased padding for better text fit */
   font-family: "Press Start 2P", monospace;
-  font-size: 16px;
+  font-size: 10px; /* Reduced font size for fitting text */
   border-radius: 5px;
-  width: 300px;
-  height: 200px;
-  margin: 0 20px;
+  width: 300px; /* Adjust width as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow for depth */
+  word-wrap: break-word; /* Ensures text wraps within the box */
+  box-sizing: border-box; /* Ensures padding is included in width */
 }
 
 .easter-egg:hover {
   cursor: pointer;
-}
-
-.easter-egg:hover .easter-egg-text {
-  display: block;
 }
