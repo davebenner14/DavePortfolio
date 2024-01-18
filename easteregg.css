@@ -13,12 +13,15 @@
 .easter-egg-text {
   display: none;
   position: absolute;
+  bottom: 100%;
   top: 60px;
   left: 50%;
   transform: translateX(-50%);
   background-color: #000;
   color: #fff;
   border: 2px solid #fff;
+  width: 400px;
+  height: auto;
   padding: 15px;
   font-family: "Press Start 2P", monospace;
   font-size: 10px;
