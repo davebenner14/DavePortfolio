@@ -24,6 +24,8 @@
 html {
   scroll-behavior: smooth;
 }
+h3 {
+}
 body {
   user-select: none;
   -webkit-user-select: none; /* Safari */
